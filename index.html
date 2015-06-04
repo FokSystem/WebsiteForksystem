@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> ForkSystem </title>
+	<link rel="stylesheet" type="text/css" href="Css/estilo.css">
+	<script type="text/javascript" src="Javascript/main.js"> </script> 
+	<script type="text/javascript" src="Javascript/jquery-1.11.3.js"> </script> 
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$('a[href^="#"]').on('click',function (e) {
+			    e.preventDefault();
+
+			    var target = this.hash;
+			    var $target = $(target);
+
+			    $('html, body').stop().animate({
+			        'scrollTop': $target.offset().top
+			    }, 1500, 'swing', function () {
+			        window.location.hash = target;
+			    });
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topo">
+ <!-- <img src="Imagens/semiLogo.png" id="imgTopo"> -->
+ 		<nav>
+		  <a href="#home">Home </a>
+		  <a href="#fazemos">Quem somos </a>
+		  <a href="#equipa">Nossa Equipa</a>
+		  <a href="#contacto">Contactos</a>
+ 		</nav>
+
+ 	<div id="socialMedia">
+  		<img src="Imagens/face.png" class="socialMedia" >
+  		<img src="Imagens/twitter.png"  class="socialMedia">
+ 	</div>
+
+	</div>
+
+
+
+	<div id="home" class="conteudos"> 
+	 	<div id="sub_conteudo"> 
+		<figure>
+  			 <img  src="Imagens/logo5.png"><br>
+  			 <figcaption id="slogan">BUSCANDO INOVAÇÃO</figcaption>
+		</figure>
+  <!--<span> Buscando Inovações</span>-->
+ 		</div>
+	</div>
+
+	<div id="fazemos" class="conteudos">
+		<div id="sub_conteudo2"> 
+ 			<h1> QUEM SOMOS </h1>
+ 			<!--<h1> </h1>-->
+			<p id="parag_somos">A <i>ForkSystem</i> é uma empresa Angolana na área de desenvolvimento web. </p>
+			<p>Com o dinamismo empresarial, científico e tecnológico, <br> a <i>ForkSystem</i> presta serviços a empresas Nacionais e Internacionais de qualquer dimensão.</p>
+	         <p>
+	         Somos eficazes em apoiar e desafiar nossos clientes na mesma medida e temos paixão por causar um grande impacto em tudo o que realizamos. Nossa cultura e abordagem singulares geram resultados contínuos, personalizados a cada cliente. Nosso estilo de trabalho colaborativo valoriza a equipe, a confiança e a tolerância frente a opiniões divergentes..<i>"Quim Borges, CEO"</i>
+	 		</p>
+		</div>
+
+ 	</div>
+	
+	<div id="equipa" class="conteudos">
+		<h1 id="cabecalho_equipa"> A NOSSA <marque>EQUIPA</marque></h1>
+		<figure class="cargos">
+			<img src="Imagens/meck111.png">
+			<figcaption class="legenda_cargos">Quim Borges</figcaption> 
+			<p class="legenda_cargos">CEO & Founder</p>
+		</figure>
+
+		<figure class="cargos">
+			<img src="Imagens/meck4.jpg" width="133" height="123">    
+			<figcaption class="legenda_cargos">Elone Sampaio</figcaption> 
+			<p class="legenda_cargos">CO & Founder</p>
+		</figure>
+
+		<figure class="cargos">
+			<img src="Imagens/meck222.png">    
+			<figcaption class="legenda_cargos">Eugénio Rosário</figcaption>
+			<p class="legenda_cargos">Front end</p>
+		</figure>
+
+		
+		<figure class="cargos">
+			<img src="Imagens/meck333.png">    
+			<figcaption class="legenda_cargos">Eugénio Rosário</figcaption>
+			<p class="legenda_cargos">Web Developer</p>
+		</figure>
+
+		<figure class="cargos">
+			<img src="Imagens/meck333.png">    
+			<figcaption class="legenda_cargos">Ndongala Meck</figcaption>
+			<p class="legenda_cargos">Web Developer</p>
+		</figure>
+
+		<h4 style="color: #fff;">Visão</h4>
+		<p class="dicas">
+			Ser a referência nacional em Angola na área de web development<br> Sermos reconhecidos pela excelência dos produtos e serviços prestados <br> Manter os padrões de exigência com elevado grau de rigor e de confiança. 
+		</p>
+	</div>
+
+	<div id="contacto" class="conteudos"> 
+		<h1 id="cabecalho_contact">FORMULÁRIO DE CONTACTOS</h1>
+		<p id="parag_form">
+			Entre em contacto connosco de uma forma simples, preenchendo o formulário em baixo disponibilizado.<br> 
+			exponha-nos a sua dúvida, sugestão ou inicia um projeto com a <i>ForkSystem</i> e entraremos em contacto consigo logo de seguida.
+		</p>
+		<form name="myForm" action="" method="post" id="contact_form" class="rounded">
+			<div class="field">
+				<label for="name">Name:</label>
+				<input type="text" class="input" name="name" id="name" required>
+				<p class="hint">
+					Enter your name.
+				</p>
+			</div>
+			
+			<div class="field">
+				<label for="email">Email:</label>
+					<input type="email" class="input" name="email" id="email" placeholder="name@email.com" required>
+					<p class="hint">
+						Enter your Email:
+					</p>
+					</div>
+
+			<div class="field">
+				<label for="phone">Phone:</label> <!--formato angola-->																			<!--Phone Number Validation-->
+					<input type="tel" class="input" name="number" id="numero" pattern="^\d{3}-\d{3}-\d{3}$"  placeholder="xxx-xxx-xxx" required>
+					<p class="hint">
+						Enter your Phone:
+					</p>
+			</div>
+			<!--"^[0-9]{9}[A-Z]{2}[0-9]{3}$"-->
+			<div class="field">
+				<label for="message">Message:</label>
+					<textarea type="text" class="input_textearea" name="mensagem" id="message" cols="25" rows="7"></textarea>
+					<p class="hint">
+						Write your Message.
+					</p>
+			</div>
+			<input type="submit" name="submit" class="button" value="enviar">
+		</form>
+	</div>
+	
+	<footer>
+		<p>Site by ForkSystem</p>
+	</footer>
+
+</body>
+<html>
